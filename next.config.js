@@ -2,8 +2,8 @@
 const nextConfig = {
   images: {
     domains: ["fakestoreapi.com"],
-    output: "export",
   },
+  output: "export", // Move this option outside of the images configuration
 };
 
 module.exports = nextConfig;
