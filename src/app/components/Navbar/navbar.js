@@ -17,7 +17,7 @@ const Navbar = ({
   return (
     <nav className="bg-white sm:grid-cols-3 py-5 px-5 gap-5 w-full grid grid-cols-1">
       <div className="col-span-1">
-        <Image src="./images/logo.png" height={150} width={150} alt="logo" />
+        <Image src="images/logo.png" height={150} width={150} alt="logo" />
       </div>
       <div className="">
         <div className="col-span-1 grid-flow-col flex rounded-xl sm:w-full w-[14rem] mr-5">
@@ -64,7 +64,7 @@ const Navbar = ({
             />
             <div className="px-4 flex justify-center">
               <Image
-                src="./images/search.svg"
+                src="images/search.svg"
                 alt="searchicon"
                 width={24}
                 height={24}
@@ -74,7 +74,7 @@ const Navbar = ({
         </div>
       </div>
       <div className="col-span-1  md:justify-center md:items-center items-end justify-end pb-1 flex grid-flow-col gap-3 py-4 sm:py-0">
-        <Image src="./images/cart.svg" alt="cart" width={24} height={24} />
+        <Image src="images/cart.svg" alt="cart" width={24} height={24} />
         <h1>Cart</h1>
         <div className="bg-[#008ECC] grid py-1 rounded-full w-fit px-2 font-bold text-white text-sm justify-center items-center">
           {cartCount}
