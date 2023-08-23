@@ -1,9 +1,37 @@
+"use client";
 import ProductCard from "./components/Products/products";
+import RootLayout from "./layout";
+import React, { useState } from "react";
+import Navbar from "./components/Navbar/navbar";
 
 export default function Home() {
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [cartCount, setCartCount] = useState(0);
+
+  const updateCartCount = () => {
+    setCartCount(cartCount + 1);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#E1E1E1]">
-      <ProductCard />
-    </main>
+    <RootLayout>
+      <Navbar
+        categoryFilter={categoryFilter}
+        onCategoryChange={setCategoryFilter}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        cartCount={cartCount}
+      />
+      <main className=" p-5 bg-[#E1E1E1] h-full overflow-x-hidden">
+        <h1 className="text-2xl font-semibold text-[#008ECC] p-5">Results</h1>
+        <ProductCard
+          categoryFilter={categoryFilter}
+          setCategoryFilter={setCategoryFilter}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          updateCartCount={updateCartCount}
+        />
+      </main>
+    </RootLayout>
   );
 }
