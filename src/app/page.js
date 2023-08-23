@@ -1,6 +1,5 @@
 "use client";
 import ProductCard from "./components/Products/products";
-import RootLayout from "./layout";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar/navbar";
 
@@ -14,23 +13,25 @@ export default function Home() {
   };
 
   return (
-    <RootLayout>
-      <Navbar
-        categoryFilter={categoryFilter}
-        onCategoryChange={setCategoryFilter}
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-        cartCount={cartCount}
-      />
+    <html lang="en">
+      <body className="bg-[#E1E1E1]">
+        <Navbar
+          categoryFilter={categoryFilter}
+          onCategoryChange={setCategoryFilter}
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+          cartCount={cartCount}
+        />
 
-      <h1 className="text-2xl font-semibold text-[#008ECC] p-5">Results</h1>
-      <ProductCard
-        categoryFilter={categoryFilter}
-        setCategoryFilter={setCategoryFilter}
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        updateCartCount={updateCartCount}
-      />
-    </RootLayout>
+        <h1 className="text-2xl font-semibold text-[#008ECC] p-5">Results</h1>
+        <ProductCard
+          categoryFilter={categoryFilter}
+          setCategoryFilter={setCategoryFilter}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          updateCartCount={updateCartCount}
+        />
+      </body>
+    </html>
   );
 }
