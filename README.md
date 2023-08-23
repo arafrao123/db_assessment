@@ -2,6 +2,8 @@
 
 This is a project built using Next.js that demonstrates how to fetch data from a fake API, allow users to search through products, sort them by category, and manage a shopping cart number. The project aims to provide a practical example of handling API data, implementing search and sorting functionality, and managing state in a Next.js application.
 
+The project is live at (https://arafrao123.github.io/db_assessment/)
+
 Getting Started
 Follow these instructions to get the project up and running on your local machine.
 
