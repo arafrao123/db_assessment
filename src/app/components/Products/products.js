@@ -46,7 +46,6 @@ const ProductCard = ({
 
   const handleAddToCart = (productId) => {
     updateCartCount();
-    console.log(`Added product with ID ${productId} to the cart`);
   };
 
   return (
