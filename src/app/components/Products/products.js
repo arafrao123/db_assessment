@@ -47,14 +47,14 @@ const ProductCard = ({
   };
 
   return (
-    <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4   ">
+    <div className="sm:grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-4 sm:mx-6 mx-7  ">
       {filteredProducts.map((product) => (
         <div
-          className="bg-white border flex flex-col justify-between rounded-xl "
+          className="bg-white flex flex-col justify-between rounded-xl w-full "
           key={product.id}
         >
-          <div className="bg-[#F5F5F5] relative group">
-            <div className="rounded-md w-fit h-fit mix-blend-normal py-5 px-8 transition-opacity relative">
+          <div className="bg-[#F5F5F5] relative group w-full rounded-t-xl">
+            <div className="rounded-md w-full h-full mix-blend-normal py-5 px-8 transition-opacity relative">
               <div className="w-48 h-48 mb-4 relative mix-blend-multiply">
                 <Image
                   className="mix-blend-normal"

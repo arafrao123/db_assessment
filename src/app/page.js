@@ -22,16 +22,15 @@ export default function Home() {
         onSearchChange={setSearchTerm}
         cartCount={cartCount}
       />
-      <main className=" p-5 bg-[#E1E1E1] h-full overflow-x-hidden">
-        <h1 className="text-2xl font-semibold text-[#008ECC] p-5">Results</h1>
-        <ProductCard
-          categoryFilter={categoryFilter}
-          setCategoryFilter={setCategoryFilter}
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          updateCartCount={updateCartCount}
-        />
-      </main>
+
+      <h1 className="text-2xl font-semibold text-[#008ECC] p-5">Results</h1>
+      <ProductCard
+        categoryFilter={categoryFilter}
+        setCategoryFilter={setCategoryFilter}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        updateCartCount={updateCartCount}
+      />
     </RootLayout>
   );
 }
